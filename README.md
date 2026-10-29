@@ -2,7 +2,7 @@
 Namestys (Náměstys) je jednoduchý kvíz na moravskoslezská náměstí, např. v Ostravě, Orlové, Rychvaldě, Karviné, atd.
 
 ## The Game Link
-🌐 https://lutynius.github.io/azurulice/
+🌐 https://lutynius.github.io/namestys/
 
 ## License & Attribution
 
