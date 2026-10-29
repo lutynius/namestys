@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <meta charset="UTF-8">
+        <title>Namestys</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+
+    <body>
+
+        <div id="main-menu">
+            <h1 id="main-menu-title">Vítejte v Namestys (Náměstys)!</h1>
+            <h2 id="main-menu-subtitle">Kvíz na náměstí v Moravskoslezském kraji.</h2>
+            <button id="start-button">Start</button>
+            <button id="colorscheme-button">Změnit barevné schéma</button>
+            <button id="changelog-button">Protokol změn</button>
+        </div>
+
+        <div id="colorscheme-settings">
+            <button id="colorscheme-to-main-menu-button">Zpět</button>
+            <section id="tricolor">
+                <div id="tricolor-color-1" class="showcase-colors"></div>
+                <div id="tricolor-color-2" class="showcase-colors"></div>
+                <div id="tricolor-color-3" class="showcase-colors"></div>
+                <h2 id="tricolor-title" class="colorscheme-title">Trikolóra</h2>
+                <button id="set-tricolor-button">Nastavit</button>
+            </section>
+            <section id="triumvirate">
+                <div id="triumvirate-color-1" class="showcase-colors"></div>
+                <div id="triumvirate-color-2" class="showcase-colors"></div>
+                <div id="triumvirate-color-3" class="showcase-colors"></div>
+                <h2 id="triumvirate-title" class="colorscheme-title">Triumvirát (Výchozí)</h2>
+                <button id="set-triumvirate-button">Nastavit</button>
+            </section>
+            <section id="light">
+                <div id="light-color-1" class="showcase-colors"></div>
+                <div id="light-color-2" class="showcase-colors"></div>
+                <div id="light-color-3" class="showcase-colors"></div>
+                <h2 id="light-title" class="colorscheme-title">Světelno</h2>
+                <button id="set-light-button">Nastavit</button>
+            </section>
+            <section id="dark">
+                <div id="dark-color-1" class="showcase-colors"></div>
+                <div id="dark-color-2" class="showcase-colors"></div>
+                <div id="dark-color-3" class="showcase-colors"></div>
+                <h2 id="dark-title" class="colorscheme-title">Temno</h2>
+                <button id="set-dark-button">Nastavit</button>
+            </section>
+        </div>
+
+        <div id="changelog">
+            <button id="changelog-to-main-menu-button">Zpět</button>
+            <div id="updatelog">
+                <p id="updatelog-text">updatelog-text</p>
+            </div>
+        </div>
+
+        <div id="game-menu">
+            <header id="header">
+                <h1 id="question-text">Text</h1>
+                <p id="copyright">Copyright</p>
+            </header>
+            <main id="main">
+                <img id="question-image" alt="Obrázek nějakého moravskoslezského náměstí z webové stránky mapy.com - Konkrétní náměstí se neví, jelikož tohle je kvíz a tenhle obrázek se frekventně mění">
+            </main>
+            <footer id="footer">
+                <h2 id="foot-title">náměstí</h2>
+                <input id="question-input" type="text">
+                <button id="submit-button" type="submit">Submit</button>
+            </footer>
+        </div>
+
+        <div id="end-results">
+            <h1 id="end-title">Konec!</h1>
+            <h2 id="end-subtitle">Pročetl jsi všechna náměstí!</h2>
+            <h1 id="end-letitle">Výsledný počet bodů:</h1>
+            <h1 id="score">
+                <span id="score-acquired">x</span>
+                 / 
+                <span id="score-maximum">y</span>
+            </h1>
+            <h1 id="percent">
+                <span id="percentage">z</span>%
+            </h1>
+        </div>
+
+        <script type="module" src="script.js"></script>
+
+    </body>
+
+</html>
