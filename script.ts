@@ -405,6 +405,13 @@ const JURIJE_GAGARINA = new Question("Co je tohle za náměstí?",
 );
 TO_BE_ITERATED.push(JURIJE_GAGARINA);
 
+const KOSTELNI = new Question("Co je tohle za náměstí?",
+    "images/kostelni.png", [
+        "kostelní", "kostelni"
+    ]
+);
+TO_BE_ITERATED.push(KOSTELNI);
+
 const maxScore: number = TO_BE_ITERATED.length;
 
 console.log(TO_BE_ITERATED)
@@ -414,16 +421,26 @@ const ITERATED: Array<Question> = [];
 
 //***********************************************************/
 
-const VERSION_1_0: string = `-------------------------------------------------------------------------------------------------------
+const BUNCH_OF_DASHES: string = "-------------------------------------------------------------------------------------------------------";
+
+const VERSION_1_1: string = BUNCH_OF_DASHES + `
+Verze 1.1 "Update" - pátek 30.10.2026
+    - vývoj začal čtvrtek 29.10.2026
+    - Přidal jsem 1 jediné náměstí:
+        1. Kostelní v Ostravě
+    - Opravil jsem ořezávání obrázků
+        - zjistil jsem, že v předchozí verzi se obrázky shora ořezaly
+`;
+
+const VERSION_1_0: string = BUNCH_OF_DASHES + `
 Verze 1.0 "Release" - čtvrtek 29.10.2026
     - vývoj začal pondělí 26.10.2026
     - 21 náměstí, ve všech jsem byl anebo je znám ((až na pár výjimek mrk ;) mrk ;)
     - 4 barevná schémata:
         - trikolóra, triumvirát, světelno, temno
-`;
+` + BUNCH_OF_DASHES;
 
-const LOG: string =
-    VERSION_1_0;
+const LOG: string = VERSION_1_1 + VERSION_1_0;
 
 UPDATELOG_TEXT.textContent = LOG;
 

@@ -321,19 +321,32 @@ const JURIJE_GAGARINA = new Question("Co je tohle za náměstí?", "images/jurij
     "jg", "j g", "j.g", "jg.", "j g.", "j. g", "j.g.", "jurg", "j. g.", "jur g", "jur.g", "jurg.", "jur g.", "jur. g", "jur.g.", "jur. g.", "jurijeg", "jurije g", "jurijeg.", "jgagarina", "jurije g.", "j gagarina", "j.gagarina", "j. gagarina", "jurgagarina", "jur gagarina", "jur.gagarina", "jur. gagarina", "jurijegagarina", "jurije gagarina", "jurije. gagarina", "yuriho gagarina", "yuri gagarina", "yurije gagarina", "yuriye gagarina"
 ]);
 TO_BE_ITERATED.push(JURIJE_GAGARINA);
+const KOSTELNI = new Question("Co je tohle za náměstí?", "images/kostelni.png", [
+    "kostelní", "kostelni"
+]);
+TO_BE_ITERATED.push(KOSTELNI);
 const maxScore = TO_BE_ITERATED.length;
 console.log(TO_BE_ITERATED);
 console.log("Max score constant: " + maxScore);
 const ITERATED = [];
 //***********************************************************/
-const VERSION_1_0 = `-------------------------------------------------------------------------------------------------------
+const BUNCH_OF_DASHES = "-------------------------------------------------------------------------------------------------------";
+const VERSION_1_1 = BUNCH_OF_DASHES + `
+Verze 1.1 "Update" - pátek 30.10.2026
+    - vývoj začal čtvrtek 29.10.2026
+    - Přidal jsem 1 jediné náměstí:
+        1. Kostelní v Ostravě
+    - Opravil jsem ořezávání obrázků
+        - zjistil jsem, že v předchozí verzi se obrázky shora ořezaly
+`;
+const VERSION_1_0 = BUNCH_OF_DASHES + `
 Verze 1.0 "Release" - čtvrtek 29.10.2026
     - vývoj začal pondělí 26.10.2026
     - 21 náměstí, ve všech jsem byl anebo je znám ((až na pár výjimek mrk ;) mrk ;)
     - 4 barevná schémata:
         - trikolóra, triumvirát, světelno, temno
-`;
-const LOG = VERSION_1_0;
+` + BUNCH_OF_DASHES;
+const LOG = VERSION_1_1 + VERSION_1_0;
 UPDATELOG_TEXT.textContent = LOG;
 preloadImages();
 export {};
