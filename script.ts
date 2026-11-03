@@ -14,12 +14,14 @@ const SET_TRICOLOR_BUTTON = document.getElementById("set-tricolor-button") as HT
 const SET_TRIUMVIRATE_BUTTON = document.getElementById("set-triumvirate-button") as HTMLButtonElement;
 const SET_LIGHT_BUTTON = document.getElementById("set-light-button") as HTMLButtonElement;
 const SET_DARK_BUTTON = document.getElementById("set-dark-button") as HTMLButtonElement;
+const SET_BLUD_BUTTON = document.getElementById("set-blud-button") as HTMLButtonElement;
 const COLORSCHEME_TITLES = document.querySelectorAll(".colorscheme-titles");
 const COLORSCHEME_TO_MAIN_MENU_BUTTON = document.getElementById("colorscheme-to-main-menu-button") as HTMLButtonElement;
 const TRICOLOR_TITLE = document.getElementById("tricolor-title") as HTMLHeadingElement;
 const TRIUMVIRATE_TITLE = document.getElementById("triumvirate-title") as HTMLHeadingElement;
 const LIGHT_TITLE = document.getElementById("light-title") as HTMLHeadingElement;
 const DARK_TITLE = document.getElementById("dark-title") as HTMLHeadingElement;
+const BLUD_TITLE = document.getElementById("blud-title") as HTMLHeadingElement;
 
 const CHANGELOG = document.getElementById("changelog") as HTMLDivElement;
 const UPDATELOG_TEXT = document.getElementById("updatelog-text") as HTMLParagraphElement;
@@ -59,6 +61,7 @@ SET_TRICOLOR_BUTTON.addEventListener("click", () => setColorScheme("tricolor"));
 SET_TRIUMVIRATE_BUTTON.addEventListener("click", () => setColorScheme("triumvirate"));
 SET_LIGHT_BUTTON.addEventListener("click", () => setColorScheme("light"));
 SET_DARK_BUTTON.addEventListener("click", () => setColorScheme("dark"));
+SET_BLUD_BUTTON.addEventListener("click", () => setColorScheme("blud"));
 
 SUBMIT_BUTTON.addEventListener("click", submitAnswer);
 
@@ -160,6 +163,7 @@ function setColorScheme(colorScheme: string): void {
         TRIUMVIRATE_TITLE.style.color = "black";
         LIGHT_TITLE.style.color = "black";
         DARK_TITLE.style.color = "black";
+        BLUD_TITLE.style.color = "black";
         HEADER.style.backgroundColor = "red";
         QUESTION_TEXT.style.color = "black";
         COPYRIGHT.style.color = "black";
@@ -190,6 +194,7 @@ function setColorScheme(colorScheme: string): void {
         TRIUMVIRATE_TITLE.style.color = "black";
         LIGHT_TITLE.style.color = "black";
         DARK_TITLE.style.color = "black";
+        BLUD_TITLE.style.color = "black";
         HEADER.style.backgroundColor = "whitesmoke";
         QUESTION_TEXT.style.color = "black";
         COPYRIGHT.style.color = "black";
@@ -217,6 +222,7 @@ function setColorScheme(colorScheme: string): void {
         TRIUMVIRATE_TITLE.style.color = "white";
         LIGHT_TITLE.style.color = "white";
         DARK_TITLE.style.color = "white";
+        BLUD_TITLE.style.color = "white";
         HEADER.style.backgroundColor = "black";
         QUESTION_TEXT.style.color = "white";
         COPYRIGHT.style.color = "white";
@@ -229,6 +235,34 @@ function setColorScheme(colorScheme: string): void {
         END_LETITLE.style.color = "white"; 
         SCORE.style.color = "white";
         PERCENT.style.color = "white";
+    }
+    else if (colorScheme == "blud"){
+        MAIN_MENU.style.backgroundColor = "white";
+        MAIN_MENU_TITLE.style.color = "black";
+        MAIN_MENU_SUBTITLE.style.color = "black";
+        COLORSCHEME_SETTINGS.style.backgroundColor = "white";
+        CHANGELOG.style.backgroundColor = "white";
+        START_BUTTON.style.backgroundColor = "cornflowerblue";
+        COLORSCHEME_BUTTON.style.backgroundColor = "dodgerblue";
+        CHANGELOG_BUTTON.style.backgroundColor = "royalblue";
+        SET_TRIUMVIRATE_BUTTON.disabled = true;
+        TRICOLOR_TITLE.style.color = "black";
+        TRIUMVIRATE_TITLE.style.color = "black";
+        LIGHT_TITLE.style.color = "black";
+        DARK_TITLE.style.color = "black";
+        BLUD_TITLE.style.color = "black";
+        HEADER.style.backgroundColor = "cornflowerblue";
+        QUESTION_TEXT.style.color = "black";
+        COPYRIGHT.style.color = "black";
+        MAIN.style.backgroundColor = "dodgerblue";
+        FOOTER.style.backgroundColor = "royalblue";
+        FOOT_TITLE.style.color = "black";
+        END_RESULTS.style.backgroundColor = "white";
+        END_TITLE.style.color = "black";
+        END_SUBTITLE.style.color = "black";
+        END_LETITLE.style.color = "black";
+        SCORE.style.color = "black";
+        PERCENT.style.color = "black";
     }
     else {
         console.log("ERROR: String argument in setColorScheme(string) method not valid.")
@@ -423,6 +457,18 @@ const ITERATED: Array<Question> = [];
 
 const BUNCH_OF_DASHES: string = "-------------------------------------------------------------------------------------------------------";
 
+const VERSION_1_2: string = BUNCH_OF_DASHES + `
+Verze 1.2 "Blud" - úterý 3.11.2026
+    - vývoj začal taktéž 3.11.2026
+    - Přidal jsem nové barevné schéma 'Blud'
+        - obsahuje tři barvy:
+            1. Cornflower blue
+            2. Dodger blue
+            3. Royal blue
+            - jsou to HTML/CSS barvy btw
+    - to jest vše.
+`
+
 const VERSION_1_1: string = BUNCH_OF_DASHES + `
 Verze 1.1 "Update" - pátek 30.10.2026
     - vývoj začal čtvrtek 29.10.2026
@@ -440,7 +486,7 @@ Verze 1.0 "Release" - čtvrtek 29.10.2026
         - trikolóra, triumvirát, světelno, temno
 ` + BUNCH_OF_DASHES;
 
-const LOG: string = VERSION_1_1 + VERSION_1_0;
+const LOG: string = VERSION_1_2 + VERSION_1_1 + VERSION_1_0;
 
 UPDATELOG_TEXT.textContent = LOG;
 
