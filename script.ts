@@ -457,6 +457,12 @@ const ITERATED: Array<Question> = [];
 
 const BUNCH_OF_DASHES: string = "-------------------------------------------------------------------------------------------------------";
 
+const VERSION_1_3: string = BUNCH_OF_DASHES + `
+Verze 1.3 "Fix" - čtvrtek 5.11.2026
+    - development jen tento den
+    - Přidal jsem ten copyright, protože jsem na to zapomněl už od Releasu
+`;
+
 const VERSION_1_2: string = BUNCH_OF_DASHES + `
 Verze 1.2 "Blud" - úterý 3.11.2026
     - vývoj začal taktéž 3.11.2026
@@ -486,7 +492,8 @@ Verze 1.0 "Release" - čtvrtek 29.10.2026
         - trikolóra, triumvirát, světelno, temno
 ` + BUNCH_OF_DASHES;
 
-const LOG: string = VERSION_1_2 + VERSION_1_1 + VERSION_1_0;
+const LOG: string = VERSION_1_3 +
+    VERSION_1_2 + VERSION_1_1 + VERSION_1_0;
 
 UPDATELOG_TEXT.textContent = LOG;
 
