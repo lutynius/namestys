@@ -367,7 +367,7 @@ const ITERATED = [];
 const BUNCH_OF_DASHES = "-------------------------------------------------------------------------------------------------------";
 const VERSION_1_4 = BUNCH_OF_DASHES + `
 
-Verze 1.4 "Pico" - úterý 10.11.2026
+Verze 1.4 "Pico" - úterý 10.11.2026 
     - Přidal jsem mezery mezi updatelog textem a '----', aby to bylo čitelnější
     - to je vše.
 
