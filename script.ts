@@ -457,13 +457,24 @@ const ITERATED: Array<Question> = [];
 
 const BUNCH_OF_DASHES: string = "-------------------------------------------------------------------------------------------------------";
 
+const VERSION_1_4: string = BUNCH_OF_DASHES + `
+
+Verze 1.4 "Pico" - úterý 10.11.2026
+    - Přidal jsem mezery mezi updatelog textem a '----', aby to bylo čitelnější
+    - to je vše.
+
+`;
+
 const VERSION_1_3: string = BUNCH_OF_DASHES + `
+
 Verze 1.3 "Fix" - čtvrtek 5.11.2026
     - development jen tento den
     - Přidal jsem ten copyright, protože jsem na to zapomněl už od Releasu
+
 `;
 
 const VERSION_1_2: string = BUNCH_OF_DASHES + `
+
 Verze 1.2 "Blud" - úterý 3.11.2026
     - vývoj začal taktéž 3.11.2026
     - Přidal jsem nové barevné schéma 'Blud'
@@ -473,26 +484,31 @@ Verze 1.2 "Blud" - úterý 3.11.2026
             3. Royal blue
             - jsou to HTML/CSS barvy btw
     - to jest vše.
+
 `
 
 const VERSION_1_1: string = BUNCH_OF_DASHES + `
+
 Verze 1.1 "Update" - pátek 30.10.2026
     - vývoj začal čtvrtek 29.10.2026
     - Přidal jsem 1 jediné náměstí:
         1. Kostelní v Ostravě
     - Opravil jsem ořezávání obrázků
         - zjistil jsem, že v předchozí verzi se obrázky shora ořezaly
+
 `;
 
 const VERSION_1_0: string = BUNCH_OF_DASHES + `
+
 Verze 1.0 "Release" - čtvrtek 29.10.2026
     - vývoj začal pondělí 26.10.2026
     - 21 náměstí, ve všech jsem byl anebo je znám ((až na pár výjimek mrk ;) mrk ;)
     - 4 barevná schémata:
         - trikolóra, triumvirát, světelno, temno
+
 ` + BUNCH_OF_DASHES;
 
-const LOG: string = VERSION_1_3 +
+const LOG: string = VERSION_1_4 + VERSION_1_3 +
     VERSION_1_2 + VERSION_1_1 + VERSION_1_0;
 
 UPDATELOG_TEXT.textContent = LOG;
