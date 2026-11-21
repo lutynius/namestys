@@ -1,6 +1,12 @@
-let score: number = 0;
+// MAIN IN-GAME VARIABLES:
+
+let score: number = 0;  
 let currentQuestion: Question;
 let currentQuestionOrdinal: number = 0;
+
+// HTML ELEMENTS:
+
+// in main menu:
 
 const MAIN_MENU = document.getElementById("main-menu") as HTMLDivElement;
 const MAIN_MENU_TITLE = document.getElementById("main-menu-title") as HTMLHeadingElement;
@@ -9,12 +15,15 @@ const START_BUTTON = document.getElementById("start-button") as HTMLButtonElemen
 const COLORSCHEME_BUTTON = document.getElementById("colorscheme-button") as HTMLButtonElement;
 const CHANGELOG_BUTTON = document.getElementById("changelog-button") as HTMLButtonElement;
 
+// in settings menu:
+
 const COLORSCHEME_SETTINGS = document.getElementById("colorscheme-settings") as HTMLDivElement;
 const SET_TRICOLOR_BUTTON = document.getElementById("set-tricolor-button") as HTMLButtonElement;
 const SET_TRIUMVIRATE_BUTTON = document.getElementById("set-triumvirate-button") as HTMLButtonElement;
 const SET_LIGHT_BUTTON = document.getElementById("set-light-button") as HTMLButtonElement;
 const SET_DARK_BUTTON = document.getElementById("set-dark-button") as HTMLButtonElement;
 const SET_BLUD_BUTTON = document.getElementById("set-blud-button") as HTMLButtonElement;
+const SET_BREVIPARTYON_BUTTON = document.getElementById("set-brevipartyon-button") as HTMLButtonElement;
 const COLORSCHEME_TITLES = document.querySelectorAll(".colorscheme-titles");
 const COLORSCHEME_TO_MAIN_MENU_BUTTON = document.getElementById("colorscheme-to-main-menu-button") as HTMLButtonElement;
 const TRICOLOR_TITLE = document.getElementById("tricolor-title") as HTMLHeadingElement;
@@ -22,10 +31,15 @@ const TRIUMVIRATE_TITLE = document.getElementById("triumvirate-title") as HTMLHe
 const LIGHT_TITLE = document.getElementById("light-title") as HTMLHeadingElement;
 const DARK_TITLE = document.getElementById("dark-title") as HTMLHeadingElement;
 const BLUD_TITLE = document.getElementById("blud-title") as HTMLHeadingElement;
+const BREVIPARTYON_TITLE = document.getElementById("brevipartyon-title") as HTMLHeadingElement;
+
+// in changelog menu:
 
 const CHANGELOG = document.getElementById("changelog") as HTMLDivElement;
 const UPDATELOG_TEXT = document.getElementById("updatelog-text") as HTMLParagraphElement;
 const CHANGELOG_TO_MAIN_MENU_BUTTON = document.getElementById("changelog-to-main-menu-button") as HTMLButtonElement;
+
+// in game:
 
 const GAME_MENU = document.getElementById("game-menu") as HTMLDivElement;
 const HEADER = document.getElementById("header") as HTMLDivElement;
@@ -38,6 +52,8 @@ const FOOT_TITLE = document.getElementById("foot-title") as HTMLHeadingElement;
 const QUESTION_INPUT = document.getElementById("question-input") as HTMLInputElement;
 const SUBMIT_BUTTON = document.getElementById("submit-button") as HTMLButtonElement;
 
+// in end results menu:
+
 const END_RESULTS = document.getElementById("end-results") as HTMLDivElement;
 const END_TITLE = document.getElementById("end-title") as HTMLHeadingElement;
 const END_SUBTITLE = document.getElementById("end-subtitle") as HTMLHeadingElement;
@@ -49,6 +65,7 @@ const PERCENTAGE = document.getElementById("percentage") as HTMLSpanElement;
 const PERCENT = document.getElementById("percent") as HTMLHeadingElement;
 
 //----------------------------------------------------------------//
+// ACTUAL SCRIPTS:
 
 START_BUTTON.addEventListener("click", startGame);
 COLORSCHEME_BUTTON.addEventListener("click", displayColorSchemeSettings);
@@ -62,6 +79,7 @@ SET_TRIUMVIRATE_BUTTON.addEventListener("click", () => setColorScheme("triumvira
 SET_LIGHT_BUTTON.addEventListener("click", () => setColorScheme("light"));
 SET_DARK_BUTTON.addEventListener("click", () => setColorScheme("dark"));
 SET_BLUD_BUTTON.addEventListener("click", () => setColorScheme("blud"));
+SET_BREVIPARTYON_BUTTON.addEventListener("click", () => setColorScheme("brevipartyon"));
 
 SUBMIT_BUTTON.addEventListener("click", submitAnswer);
 
@@ -164,6 +182,7 @@ function setColorScheme(colorScheme: string): void {
         LIGHT_TITLE.style.color = "black";
         DARK_TITLE.style.color = "black";
         BLUD_TITLE.style.color = "black";
+        BREVIPARTYON_TITLE.style.color = "black"
         HEADER.style.backgroundColor = "red";
         QUESTION_TEXT.style.color = "black";
         COPYRIGHT.style.color = "black";
@@ -195,6 +214,7 @@ function setColorScheme(colorScheme: string): void {
         LIGHT_TITLE.style.color = "black";
         DARK_TITLE.style.color = "black";
         BLUD_TITLE.style.color = "black";
+        BREVIPARTYON_TITLE.style.color = "black"
         HEADER.style.backgroundColor = "whitesmoke";
         QUESTION_TEXT.style.color = "black";
         COPYRIGHT.style.color = "black";
@@ -223,6 +243,7 @@ function setColorScheme(colorScheme: string): void {
         LIGHT_TITLE.style.color = "white";
         DARK_TITLE.style.color = "white";
         BLUD_TITLE.style.color = "white";
+        BREVIPARTYON_TITLE.style.color = "white"
         HEADER.style.backgroundColor = "black";
         QUESTION_TEXT.style.color = "white";
         COPYRIGHT.style.color = "white";
@@ -251,6 +272,7 @@ function setColorScheme(colorScheme: string): void {
         LIGHT_TITLE.style.color = "black";
         DARK_TITLE.style.color = "black";
         BLUD_TITLE.style.color = "black";
+        BREVIPARTYON_TITLE.style.color = "black"
         HEADER.style.backgroundColor = "cornflowerblue";
         QUESTION_TEXT.style.color = "black";
         COPYRIGHT.style.color = "black";
@@ -263,6 +285,35 @@ function setColorScheme(colorScheme: string): void {
         END_LETITLE.style.color = "black";
         SCORE.style.color = "black";
         PERCENT.style.color = "black";
+    } 
+    else if (colorScheme == "brevipartyon"){
+        MAIN_MENU.style.backgroundColor = "white";
+        MAIN_MENU_TITLE.style.color = "black";
+        MAIN_MENU_SUBTITLE.style.color = "black";
+        COLORSCHEME_SETTINGS.style.backgroundColor = "white";
+        CHANGELOG.style.backgroundColor = "white";
+        START_BUTTON.style.backgroundColor = "hotpink";
+        COLORSCHEME_BUTTON.style.backgroundColor = "lime";
+        CHANGELOG_BUTTON.style.backgroundColor = "gold";
+        SET_TRIUMVIRATE_BUTTON.disabled = true;
+        TRICOLOR_TITLE.style.color = "black";
+        TRIUMVIRATE_TITLE.style.color = "black";
+        LIGHT_TITLE.style.color = "black";
+        DARK_TITLE.style.color = "black";
+        BLUD_TITLE.style.color = "black";
+        BREVIPARTYON_TITLE.style.color = "black"
+        HEADER.style.backgroundColor = "hotpink";
+        QUESTION_TEXT.style.color = "black";
+        COPYRIGHT.style.color = "black";
+        MAIN.style.backgroundColor = "lime";
+        FOOTER.style.backgroundColor = "gold";
+        FOOT_TITLE.style.color = "black";
+        END_RESULTS.style.backgroundColor = "white";
+        END_TITLE.style.color = "black";
+        END_SUBTITLE.style.color = "black";
+        END_LETITLE.style.color = "black";
+        SCORE.style.color = "black";
+        PERCENT.style.color = "black"; 
     }
     else {
         console.log("ERROR: String argument in setColorScheme(string) method not valid.")
@@ -457,6 +508,23 @@ const ITERATED: Array<Question> = [];
 
 const BUNCH_OF_DASHES: string = "-------------------------------------------------------------------------------------------------------";
 
+const VERSION_1_5: string = BUNCH_OF_DASHES + `
+
+Verze 1.5 "Brevipartyon" - sobota 21.11.2026
+    - vývoj 21.11.2026
+    - Novinky:
+        - Přidal jsem nové barevné schéma 'Brevipartyon'  
+            - založené na "Partyonu" z 2.1.2026 (Triumvirát je z 1.1.2026, ofiko 2.1.2026 taky)
+            - CSS barvy:
+                1. hotpink
+                2. lime
+                3. gold
+    
+    -Změny:
+        - U definování const html elementů jsou přidal komentáře do které části patří (hlavní menu, nastevní schémat, herní panel..) pro lepší čitelnost
+
+`;
+
 const VERSION_1_4: string = BUNCH_OF_DASHES + `
 
 Verze 1.4 "Pico" - úterý 10.11.2026
@@ -508,7 +576,7 @@ Verze 1.0 "Release" - čtvrtek 29.10.2026
 
 ` + BUNCH_OF_DASHES;
 
-const LOG: string = VERSION_1_4 + VERSION_1_3 +
+const LOG: string = VERSION_1_5 + VERSION_1_4 + VERSION_1_3 +
     VERSION_1_2 + VERSION_1_1 + VERSION_1_0;
 
 UPDATELOG_TEXT.textContent = LOG;

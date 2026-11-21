@@ -1,18 +1,23 @@
+// MAIN IN-GAME VARIABLES:
 let score = 0;
 let currentQuestion;
 let currentQuestionOrdinal = 0;
+// HTML ELEMENTS:
+// in main menu:
 const MAIN_MENU = document.getElementById("main-menu");
 const MAIN_MENU_TITLE = document.getElementById("main-menu-title");
 const MAIN_MENU_SUBTITLE = document.getElementById("main-menu-subtitle");
 const START_BUTTON = document.getElementById("start-button");
 const COLORSCHEME_BUTTON = document.getElementById("colorscheme-button");
 const CHANGELOG_BUTTON = document.getElementById("changelog-button");
+// in settings menu:
 const COLORSCHEME_SETTINGS = document.getElementById("colorscheme-settings");
 const SET_TRICOLOR_BUTTON = document.getElementById("set-tricolor-button");
 const SET_TRIUMVIRATE_BUTTON = document.getElementById("set-triumvirate-button");
 const SET_LIGHT_BUTTON = document.getElementById("set-light-button");
 const SET_DARK_BUTTON = document.getElementById("set-dark-button");
 const SET_BLUD_BUTTON = document.getElementById("set-blud-button");
+const SET_BREVIPARTYON_BUTTON = document.getElementById("set-brevipartyon-button");
 const COLORSCHEME_TITLES = document.querySelectorAll(".colorscheme-titles");
 const COLORSCHEME_TO_MAIN_MENU_BUTTON = document.getElementById("colorscheme-to-main-menu-button");
 const TRICOLOR_TITLE = document.getElementById("tricolor-title");
@@ -20,9 +25,12 @@ const TRIUMVIRATE_TITLE = document.getElementById("triumvirate-title");
 const LIGHT_TITLE = document.getElementById("light-title");
 const DARK_TITLE = document.getElementById("dark-title");
 const BLUD_TITLE = document.getElementById("blud-title");
+const BREVIPARTYON_TITLE = document.getElementById("brevipartyon-title");
+// in changelog menu:
 const CHANGELOG = document.getElementById("changelog");
 const UPDATELOG_TEXT = document.getElementById("updatelog-text");
 const CHANGELOG_TO_MAIN_MENU_BUTTON = document.getElementById("changelog-to-main-menu-button");
+// in game:
 const GAME_MENU = document.getElementById("game-menu");
 const HEADER = document.getElementById("header");
 const QUESTION_TEXT = document.getElementById("question-text");
@@ -33,6 +41,7 @@ const FOOTER = document.getElementById("footer");
 const FOOT_TITLE = document.getElementById("foot-title");
 const QUESTION_INPUT = document.getElementById("question-input");
 const SUBMIT_BUTTON = document.getElementById("submit-button");
+// in end results menu:
 const END_RESULTS = document.getElementById("end-results");
 const END_TITLE = document.getElementById("end-title");
 const END_SUBTITLE = document.getElementById("end-subtitle");
@@ -43,6 +52,7 @@ const SCORE_MAXIMUM = document.getElementById("score-maximum");
 const PERCENTAGE = document.getElementById("percentage");
 const PERCENT = document.getElementById("percent");
 //----------------------------------------------------------------//
+// ACTUAL SCRIPTS:
 START_BUTTON.addEventListener("click", startGame);
 COLORSCHEME_BUTTON.addEventListener("click", displayColorSchemeSettings);
 CHANGELOG_BUTTON.addEventListener("click", displayChangelog);
@@ -53,6 +63,7 @@ SET_TRIUMVIRATE_BUTTON.addEventListener("click", () => setColorScheme("triumvira
 SET_LIGHT_BUTTON.addEventListener("click", () => setColorScheme("light"));
 SET_DARK_BUTTON.addEventListener("click", () => setColorScheme("dark"));
 SET_BLUD_BUTTON.addEventListener("click", () => setColorScheme("blud"));
+SET_BREVIPARTYON_BUTTON.addEventListener("click", () => setColorScheme("brevipartyon"));
 SUBMIT_BUTTON.addEventListener("click", submitAnswer);
 function startGame() {
     MAIN_MENU.style.display = "none";
@@ -144,6 +155,7 @@ function setColorScheme(colorScheme) {
         LIGHT_TITLE.style.color = "black";
         DARK_TITLE.style.color = "black";
         BLUD_TITLE.style.color = "black";
+        BREVIPARTYON_TITLE.style.color = "black";
         HEADER.style.backgroundColor = "red";
         QUESTION_TEXT.style.color = "black";
         COPYRIGHT.style.color = "black";
@@ -175,6 +187,7 @@ function setColorScheme(colorScheme) {
         LIGHT_TITLE.style.color = "black";
         DARK_TITLE.style.color = "black";
         BLUD_TITLE.style.color = "black";
+        BREVIPARTYON_TITLE.style.color = "black";
         HEADER.style.backgroundColor = "whitesmoke";
         QUESTION_TEXT.style.color = "black";
         COPYRIGHT.style.color = "black";
@@ -203,6 +216,7 @@ function setColorScheme(colorScheme) {
         LIGHT_TITLE.style.color = "white";
         DARK_TITLE.style.color = "white";
         BLUD_TITLE.style.color = "white";
+        BREVIPARTYON_TITLE.style.color = "white";
         HEADER.style.backgroundColor = "black";
         QUESTION_TEXT.style.color = "white";
         COPYRIGHT.style.color = "white";
@@ -231,11 +245,41 @@ function setColorScheme(colorScheme) {
         LIGHT_TITLE.style.color = "black";
         DARK_TITLE.style.color = "black";
         BLUD_TITLE.style.color = "black";
+        BREVIPARTYON_TITLE.style.color = "black";
         HEADER.style.backgroundColor = "cornflowerblue";
         QUESTION_TEXT.style.color = "black";
         COPYRIGHT.style.color = "black";
         MAIN.style.backgroundColor = "dodgerblue";
         FOOTER.style.backgroundColor = "royalblue";
+        FOOT_TITLE.style.color = "black";
+        END_RESULTS.style.backgroundColor = "white";
+        END_TITLE.style.color = "black";
+        END_SUBTITLE.style.color = "black";
+        END_LETITLE.style.color = "black";
+        SCORE.style.color = "black";
+        PERCENT.style.color = "black";
+    }
+    else if (colorScheme == "brevipartyon") {
+        MAIN_MENU.style.backgroundColor = "white";
+        MAIN_MENU_TITLE.style.color = "black";
+        MAIN_MENU_SUBTITLE.style.color = "black";
+        COLORSCHEME_SETTINGS.style.backgroundColor = "white";
+        CHANGELOG.style.backgroundColor = "white";
+        START_BUTTON.style.backgroundColor = "hotpink";
+        COLORSCHEME_BUTTON.style.backgroundColor = "lime";
+        CHANGELOG_BUTTON.style.backgroundColor = "gold";
+        SET_TRIUMVIRATE_BUTTON.disabled = true;
+        TRICOLOR_TITLE.style.color = "black";
+        TRIUMVIRATE_TITLE.style.color = "black";
+        LIGHT_TITLE.style.color = "black";
+        DARK_TITLE.style.color = "black";
+        BLUD_TITLE.style.color = "black";
+        BREVIPARTYON_TITLE.style.color = "black";
+        HEADER.style.backgroundColor = "hotpink";
+        QUESTION_TEXT.style.color = "black";
+        COPYRIGHT.style.color = "black";
+        MAIN.style.backgroundColor = "lime";
+        FOOTER.style.backgroundColor = "gold";
         FOOT_TITLE.style.color = "black";
         END_RESULTS.style.backgroundColor = "white";
         END_TITLE.style.color = "black";
@@ -365,9 +409,25 @@ console.log("Max score constant: " + maxScore);
 const ITERATED = [];
 //***********************************************************/
 const BUNCH_OF_DASHES = "-------------------------------------------------------------------------------------------------------";
+const VERSION_1_5 = BUNCH_OF_DASHES + `
+
+Verze 1.5 "Brevipartyon" - sobota 21.11.2026
+    - vývoj 21.11.2026
+    - Novinky:
+        - Přidal jsem nové barevné schéma 'Brevipartyon'  
+            - založené na "Partyonu" z 2.1.2026 (Triumvirát je z 1.1.2026, ofiko 2.1.2026 taky)
+            - CSS barvy:
+                1. hotpink
+                2. lime
+                3. gold
+    
+    -Změny:
+        - U definování const html elementů jsou přidal komentáře do které části patří (hlavní menu, nastevní schémat, herní panel..) pro lepší čitelnost
+
+`;
 const VERSION_1_4 = BUNCH_OF_DASHES + `
 
-Verze 1.4 "Pico" - úterý 10.11.2026 
+Verze 1.4 "Pico" - úterý 10.11.2026
     - Přidal jsem mezery mezi updatelog textem a '----', aby to bylo čitelnější
     - to je vše.
 
@@ -411,7 +471,7 @@ Verze 1.0 "Release" - čtvrtek 29.10.2026
         - trikolóra, triumvirát, světelno, temno
 
 ` + BUNCH_OF_DASHES;
-const LOG = VERSION_1_4 + VERSION_1_3 +
+const LOG = VERSION_1_5 + VERSION_1_4 + VERSION_1_3 +
     VERSION_1_2 + VERSION_1_1 + VERSION_1_0;
 UPDATELOG_TEXT.textContent = LOG;
 preloadImages();
