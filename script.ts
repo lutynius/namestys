@@ -521,7 +521,7 @@ Verze 1.5 "Brevipartyon" - sobota 21.11.2026
                 3. gold
     
     -Změny:
-        - U definování const html elementů jsou přidal komentáře do které části patří (hlavní menu, nastevní schémat, herní panel..) pro lepší čitelnost
+        - U definování const html elementů jsem přidal komentáře do které části patří (hlavní menu, nastevní schémat, herní panel..) pro lepší čitelnost
 
 `;
 
